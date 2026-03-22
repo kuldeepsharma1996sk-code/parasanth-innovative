@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#2d2d2d"/>
+  <circle cx="300" cy="260" r="120" fill="#3d3d3d"/>
+  <rect x="180" y="400" width="240" height="20" rx="10" fill="#4a4a4a"/>
+  <text x="300" y="480" text-anchor="middle" fill="#888888" font-family="Inter, sans-serif" font-size="24">Pedestal Fan</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#2d2d2d"/>
+  <ellipse cx="300" cy="200" rx="80" ry="100" fill="#c0c0c0" opacity="0.3"/>
+  <rect x="260" y="300" width="80" height="150" rx="5" fill="#3d3d3d"/>
+  <text x="300" y="520" text-anchor="middle" fill="#888888" font-family="Inter, sans-serif" font-size="24">Electric Kettle</text>
+</svg>

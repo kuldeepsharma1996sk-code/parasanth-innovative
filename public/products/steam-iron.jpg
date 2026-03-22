@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#2d2d2d"/>
+  <polygon points="180,200 420,200 390,400 210,400" fill="#3d3d3d"/>
+  <ellipse cx="300" cy="250" rx="40" ry="20" fill="#4a4a4a" opacity="0.5"/>
+  <rect x="270" y="400" width="60" height="60" fill="#4a4a4a"/>
+  <text x="300" y="520" text-anchor="middle" fill="#888888" font-family="Inter, sans-serif" font-size="24">Steam Iron</text>
+</svg>

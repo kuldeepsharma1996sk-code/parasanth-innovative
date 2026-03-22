@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-charcoal: #1a1a1a;
+  --color-grey-light: #f5f5f7;
+  --color-grey-mid: #d2d2d7;
+  --color-grey-dark: #86868b;
+  --color-tesla-red: #e82127;
+  --color-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-charcoal);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Light Glassmorphism utilities */
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.60);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(210, 210, 215, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(210, 210, 215, 0.3);
+  }
+
+  .glass-header {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border-bottom: 1px solid rgba(210, 210, 215, 0.35);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #1a1a1a 0%, #86868b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-red {
+    background: linear-gradient(135deg, #e82127 0%, #ff4d52 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: 100vh;
+  }
+}
+
+/* Custom scrollbar - light theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d2d2d7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #86868b;
+}
+
+/* Hero section specific styles - Light mode */
+.hero-overlay {
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0.92) 100%);
+}
+
+/* Button styles - Triple Grey Industrial Theme */
+.btn-primary {
+  @apply px-10 py-5 bg-tesla-red text-white rounded-full text-xs font-black uppercase tracking-[0.3em] transition-all duration-300;
+  @apply hover:bg-parasanth-charcoal hover:shadow-xl hover:-translate-y-1;
+  @apply active:translate-y-0 active:scale-95;
+}
+
+.btn-secondary {
+  @apply px-10 py-5 border-2 border-parasanth-grey-mid/40 bg-transparent text-parasanth-charcoal rounded-full text-xs font-black uppercase tracking-[0.3em] transition-all duration-300;
+  @apply hover:bg-parasanth-grey-light hover:border-parasanth-grey-mid hover:shadow-soft hover:-translate-y-1;
+  @apply active:translate-y-0 active:scale-95;
+}
+
+/* Product card hover effects - Light mode */
+.product-card {
+  @apply transition-all duration-500 ease-out;
+}
+
+.product-card:hover {
+  @apply transform -translate-y-2;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12);
+}
+
+/* Accordion/Drawer animation */
+.drawer-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.drawer-content.open {
+  max-height: 500px;
+  padding: 1.5rem 0;
+}
+
+/* Prose overrides for light theme */
+.prose-light h2 {
+  @apply text-parasanth-charcoal;
+}
+
+.prose-light p,
+.prose-light li {
+  @apply text-parasanth-grey-dark;
+}
+
+/* Innovation Live Stamp Animation */
+.stamp-rotate {
+  animation: rotation 20s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
